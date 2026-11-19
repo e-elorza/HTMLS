@@ -1,0 +1,88 @@
+body {
+    background-color: #f8fafc;
+}
+
+header h1 {
+    color: #2563eb;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0px 20px 0px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: #838384;
+    font-weight: 800;
+}
+
+#selected {
+    display: flexbox;
+    border: 1px transparent black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+    background-color: #ffffff;
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid; 
+    border-color: #e2e8f0;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+span {
+    font-size: 20px;
+    color: #64748b;
+}
+
+.container h1{
+    color: #2563eb;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+}
+
+.container p{
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1e293b;
+}
+
+#enviar {
+    width: 700px;
+    margin: 30px auto;
+    padding: 0 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+legend {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+label {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+hr {
+    color: #e2e8f044;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="devweb_form.css">
+    <title>DevWeb101</title>
+</head>
+<body>
+    <header>
+        <h1>DevWeb<span>&nbsp; 101</span></h1>
+        <nav>
+            <a href="/devweb/HTML/devweb_html.html">HTML</a>
+            <a href="/devweb/CSS/devweb_css.html">CSS</a>
+            <a href="/devweb/JavaScript/devweb_javascript.html">JavaScript</a>
+            <a id="selected" href="/devweb/FORM/devweb_form.html">Questionário</a>
+        </nav>
+    </header>
+
+    <form id="quiz">
+        <div class="container">
+            
+            <br>
+            <b><legend>1. Qual elemento HTML é utilizado para definir a estrutura principal de cabeçalho da página?</legend></b> <br>
+            <label><input type="radio" name="q1" value="head" required> &lt;head&gt;</label><br><br>
+            <label><input type="radio" name="q1" value="header"> &lt;header&gt;</label><br><br>
+            <label><input type="radio" name="q1" value="top"> &lt;top&gt;</label><br><br>
+            <label><input type="radio" name="q1" value="nav"> &lt;nav&gt;</label>
+            <br><br><br><hr><br><br><br>
+        
+            <b><legend>2. Qual propriedade CSS é usada para alterar a cor do fundo de um elemento?</legend></b> <br>
+            <label><input type="radio" name="q2" value="color" required> color</label><br><br>
+            <label><input type="radio" name="q2" value="background-color"> background-color</label><br><br>
+            <label><input type="radio" name="q2" value="border-color"> border-color</label><br><br>
+            <label><input type="radio" name="q2" value="fill"> fill</label>
+            <br><br><br><hr><br><br><br>
+
+            <b><legend>3. Qual método do DOM é utilizado para selecionar um elemento pelo seu atributo ID?</legend></b> <br>
+            <label><input type="radio" name="q3" value="querySelector" required> document.querySelector()</label><br><br>
+            <label><input type="radio" name="q3" value="getElementById"> document.getElementById()</label><br><br>
+            <label><input type="radio" name="q3" value="getElementsByClassName"> document.getElementsByClassName()</label><br><br>
+            <label><input type="radio" name="q3" value="createElement"> document.createElement()</label>
+            
+
+            <br><br>
+            <div id="enviar">
+            <button type="submit">Enviar</button>
+            <p id="resultado"></p>
+            </div>
+            
+        </div>
+        
+    </form>
+
+    <script>
+        const gabarito = {
+            q1: "header",
+            q2: "background-color",
+            q3: "getElementById"
+        };
+
+        document.getElementById("quiz").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const total = Object.keys(gabarito).length;
+            let corretas = 0;
+
+            for (const pergunta in gabarito) {
+                const marcada = document.querySelector(`input[name="${pergunta}"]:checked`);
+                if (marcada && marcada.value === gabarito[pergunta]) {
+                    corretas++;
+                }
+            }
+
+            document.getElementById("resultado").textContent = `${corretas} de ${total} corretas`;
+        });
+    </script>
+</body>
+</html>
